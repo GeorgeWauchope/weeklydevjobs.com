@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="We will send you an email once a week with all of the most recent available software engineering jobs from Y Combinator startups."
-    />
-    <title>Weekly Dev Jobs</title>
-    <link rel="stylesheet" href="app.css" />
-  </head>
-  <body>
-    <div class="main-container">
+<?php require "header.php"; ?>
+
+ 
+<div class="main-container">
       <div class="container">
         <h1>
           Are you a software engineer that wants to work for a Y Combinator
@@ -34,13 +24,13 @@
     <div class="login-container">
       <div class="login-box">
         <h2>Enter Your Details:</h2>
-        <form>
+        <form action="subscribe.php" method="POST">
           <div class="user-box">
-            <input type="text" name="" required="" />
+            <input type="text" name="firstName" required="" />
             <label>First Name</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required="" />
+            <input type="email" name="email" required="" />
             <label>Email</label>
           </div>
           <div class="buttonContainer">
@@ -63,6 +53,5 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
-  </body>
-</html>
+    <?php require "footer.php"; ?>
+    
