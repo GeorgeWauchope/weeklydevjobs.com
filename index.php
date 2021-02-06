@@ -1,4 +1,5 @@
 <?php require "header.php"; ?>
+<?php require "functions.php"; ?>
 
  
 <div class="main-container">
@@ -24,13 +25,17 @@
     <div class="login-container">
       <div class="login-box">
         <h2>Enter Your Details:</h2>
+        <?php if (getVar ("email")) {
+             echo "There was a problem with your submission.";
+        }
+        ?>
         <form action="subscribe.php" method="POST">
           <div class="user-box">
-            <input type="text" name="firstName" required="" />
+            <input type="text" name="firstName" required="" value="<?php echo getVar('firstName') ?>" />
             <label>First Name</label>
           </div>
           <div class="user-box">
-            <input type="email" name="email" required="" />
+            <input type="email" name="email" required="" value="<?php echo getVar('email') ?>" />
             <label>Email</label>
           </div>
           <div class="buttonContainer">
